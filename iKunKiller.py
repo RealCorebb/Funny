@@ -1,6 +1,5 @@
 import threading
 import time
-<<<<<<< HEAD
 import requests as rs
 from mcrcon import MCRcon
 import time
@@ -12,14 +11,6 @@ rcon_password = "asd951753"  # 替换为你实际设置的RCON密码
 obs_client = obsws("localhost", 4455, "951753")
 obs_client.connect()
 
-=======
-import requests
-import keyboard
-from mcrcon import MCRcon
-server_address = "192.168.2.125"  # 替换为Minecraft服务器的IP地址
-server_port = 25575  # 替换为Minecraft服务器RCON端口号
-rcon_password = "asd951753"  # 替换为你实际设置的RCON密码
->>>>>>> 0fb430a1041293f838e4a31901a81d6286a08779
 
 # 数字形状定义
 digit_shapes = {
@@ -136,22 +127,13 @@ def update_likes_on_minecraft_server(likes):
 
 def send_fireball(idx,length):
     if(idx == 0):
-<<<<<<< HEAD
         obs_client.call(requests.StartRecord())
     client.command("summon minecraft:fireball 2074 64 -2048 {ExplosionPower:1,Motion:[1.0,0.0,0.0]}")
-=======
-        keyboard.press('F8')
-    client.command("summon minecraft:fireball 2074 64 -2048 {ExplosionPower:4,Motion:[1.0,0.0,0.0]}")
->>>>>>> 0fb430a1041293f838e4a31901a81d6286a08779
     if(idx == length - 1):
         threading.Timer(2, lambda: obs_client.call(requests.StopRecord())).start()
 
 connect_to_server(server_address, server_port, rcon_password)
-<<<<<<< HEAD
 video_id = 387970154  # 替换为你要获取点赞数的视频ID
-=======
-video_id = 857470696  # 替换为你要获取点赞数的视频ID
->>>>>>> 0fb430a1041293f838e4a31901a81d6286a08779
 likes = None
 def watch_likes():
     global likes
@@ -170,7 +152,3 @@ def watch_likes():
 
 if __name__ == '__main__':
     watch_likes()
-<<<<<<< HEAD
-
-=======
->>>>>>> 0fb430a1041293f838e4a31901a81d6286a08779
